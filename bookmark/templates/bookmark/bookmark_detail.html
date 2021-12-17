@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %} Detail {% endblock %}
+
+{% block content %}
+{{object.site_name}}</br>
+{{object.url}}
+<br>
+<td><a href="{% url 'bookmark:update' pk=bookmark.id %}" class="btn btn-success btn-sm">수정</a></td>
+<td><a href="{% url 'bookmark:delete' pk=bookmark.id %}" class="btn btn-danger btn-sm">삭제</a></td>
+{% endblock %}
+
+
+
